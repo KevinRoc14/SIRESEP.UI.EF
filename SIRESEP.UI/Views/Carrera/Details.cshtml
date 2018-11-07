@@ -1,0 +1,33 @@
+﻿@model SIRESEP.DATOS.tbCarrera
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles de la carrera</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idCarrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCarrera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carrera)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idCarrera }) |
+    @Html.ActionLink("Ver todas las carreras", "Index")
+</p>

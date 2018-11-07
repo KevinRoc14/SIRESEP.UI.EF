@@ -1,0 +1,33 @@
+﻿@model SIRESEP.DATOS.tbInfoGenero
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idGenero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idGenero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idGenero }) |
+    @Html.ActionLink("Ver informacion de Generos", "Index")
+</p>

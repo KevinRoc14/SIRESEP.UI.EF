@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SIRESEP.DATOS.tbInfoGradoEstudio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Grados de Estudios</h2>
+
+<p>
+    @Html.ActionLink("Nuevo grado", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idGradoEstudio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idGradoEstudio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.idGradoEstudio }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.idGradoEstudio }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.idGradoEstudio }, new { onclick = "return confirm('Desea eliminar esta certificacion?');" })
+        </td>
+    </tr>
+}
+
+</table>

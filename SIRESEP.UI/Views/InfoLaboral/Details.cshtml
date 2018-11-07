@@ -1,0 +1,41 @@
+﻿@model SIRESEP.DATOS.tbInfoLaboral
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idInfoLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idInfoLaboral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.profesion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.profesion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tiempoExperiencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tiempoExperiencia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idInfoLaboral }) |
+    @Html.ActionLink("Ver Informacion Laboral", "Index")
+</p>

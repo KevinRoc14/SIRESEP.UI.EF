@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SIRESEP.DATOS.tbInfoLicenciaConducir>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2> Licencias </h2>
+
+<p>
+    @Html.ActionLink("Nueva Licencia", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idLicenciaConducir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.licencia)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idLicenciaConducir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.licencia)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.idLicenciaConducir }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.idLicenciaConducir }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.idLicenciaConducir }, new { onclick = "return confirm('Desea eliminar esta Licencia?');" })
+        </td>
+    </tr>
+    }
+
+</table>

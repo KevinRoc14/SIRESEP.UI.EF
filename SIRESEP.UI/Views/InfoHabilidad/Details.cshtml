@@ -1,0 +1,33 @@
+﻿@model SIRESEP.DATOS.tbInfoHabilidad
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idHabilidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idHabilidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.habilidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.habilidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idHabilidad }) |
+    @Html.ActionLink("Ver las habilidades", "Index")
+</p>

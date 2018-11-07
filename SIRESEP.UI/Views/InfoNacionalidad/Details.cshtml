@@ -1,0 +1,33 @@
+﻿@model SIRESEP.DATOS.tbInfoNacionalidad
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles de la nacionalidad</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idNacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idNacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nacionalidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idNacionalidad }) |
+    @Html.ActionLink("Ver Nacionalidades", "Index")
+</p>

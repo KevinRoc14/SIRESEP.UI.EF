@@ -1,0 +1,42 @@
+﻿@model SIRESEP.DATOS.tbInfoInstitucion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles de la Institucion</h2>
+
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idInstitucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idInstitucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreInstitucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreInstitucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ano)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idInstitucion }) |
+    @Html.ActionLink("Ver Instituciones", "Index")
+</p>
